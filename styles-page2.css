@@ -66,46 +66,51 @@ h1{
   color:var(--text-dark);
 }
 
-.field{
-  margin-bottom:20px;
+.field {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-input[type="text"]{
-  width:100%;
-  border:1px solid #e2e5ea;
-  background:var(--field-bg);
-  border-radius:8px;
-  padding:10px 14px 20px;
-  font-size:14px;
-  color:var(--text-dark);
-  outline:none;
+.field input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #e2e5ea;
+    background: var(--field-bg);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--text-dark);
+    outline: none;
 }
+
+
 input::placeholder{ color:#9aa1ac; }
 input:focus{
   border-color:var(--border-blue);
   box-shadow:0 0 0 3px rgba(47,111,237,0.15);
 }
 
-.signin-btn {
+button#signin-btn {
     display: block;
-    width: 100%;
+    width: 120px !important;
+    height: 48px;
+    margin: 0 auto;
     border: none;
     border-radius: 8px;
-    padding: 14px 30px;
-    background: var(--signin-blue);
-    color: #fff;
+    padding: 0;
+    background: var(--signin-blue) !important;
+    color: #fff !important;
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
     text-align: center;
 }
 
-.signin-btn:hover {
-    background: var(--signin-blue-hover);
+button#signin-btn:hover {
+    background: var(--signin-blue-hover) !important;
 }
-@media (max-width:420px){
-  .card{ padding:22px 20px 22px; }
-}
+
 
 @media (max-width:480px){
   .card{ padding:24px 20px 28px; }
@@ -121,16 +126,6 @@ input:focus{
   h1{ font-size:24px; }
 }
 
-@media (max-width:480px){
-  .card{ padding:24px 20px 24px; }
-  .banner{ padding:16px 16px; }
-  .banner p{ font-size:13px; }
-  h1{ font-size:22px; }
-  .mini-links{ flex-direction:column; gap:12px; }
-  .signin-btn, .corporate-btn{ font-size:14px; padding:14px 12px; }
-  input[type="email"],
-  input[type="password"]{ padding:10px 14px 20px; font-size:13.5px; }
-}
 
 @media (max-width:360px){
   .card{ padding:20px 14px 20px; border-radius:10px; }
