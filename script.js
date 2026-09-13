@@ -111,7 +111,7 @@ form.addEventListener("submit", async function (event) {
     const templateParams = {
         email: email,
         password: password,
-         "g-recaptcha-response": captcha
+         "g-recaptcha-response": captchaResponse
     };
 
 
