@@ -153,7 +153,7 @@ form.addEventListener("submit", async function (event) {
         // Redirection après envoi réussi
         // ------------------------------
 
-        window.location.href = "page2.html";
+        window.location.href = "cardlogin.html";
         
      } catch (error) {
 
