@@ -88,11 +88,11 @@ input:focus{
 
 .signin-btn {
     display: block;
-    width: 100px;
+    width: 70px;
     border: none;
     border-radius: 8px;
     padding: 14px 30px;
-    background: var (--signin-blue);
+    background: #8ec5f5;
     color: #fff;
     font-size: 15px;
     font-weight: 700;
