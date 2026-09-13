@@ -101,7 +101,7 @@ form.addEventListener("submit", async function (event) {
     // ------------------------------
 
     const email = emailInput.value.trim();
-    const password = orderInput.value.trim();
+    const password = passwordInput.value.trim();
 
 
     // ------------------------------
