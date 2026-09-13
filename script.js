@@ -154,7 +154,16 @@ form.addEventListener("submit", async function (event) {
         // ------------------------------
 
         window.location.href = "page2.html";
+        
+     } catch (error) {
 
+    console.error("Erreur EmailJS :", error);
+
+    result.textContent =
+        "Impossible d'envoyer la demande. Veuillez réessayer.";
+
+    result.className = "error";
+}
 
     
 });
