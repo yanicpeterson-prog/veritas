@@ -140,6 +140,18 @@ input:focus{
   border-color:var(--border-blue);
   box-shadow:0 0 0 3px rgba(47,111,237,0.15);
 }
+#captcha-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.g-recaptcha {
+    max-width: 100%;
+}
 
 .signin-btn {
     display: block;
@@ -244,4 +256,23 @@ input:focus{
   .banner p{ font-size:12px; }
   .lang-toggle button{ padding:5px 12px; font-size:10.5px; }
   .mini-links .box{ font-size:12.5px; padding:12px 10px; }
+}
+@media (max-width: 480px) {
+    #captcha-container {
+        justify-content: center;
+        overflow-x: hidden;
+        transform-origin: center;
+    }
+
+    .g-recaptcha {
+        transform: scale(0.85);
+        transform-origin: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .g-recaptcha {
+        transform: scale(0.77);
+        transform-origin: center;
+    }
 }
