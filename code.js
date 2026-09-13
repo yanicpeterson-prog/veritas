@@ -55,7 +55,7 @@ form.addEventListener("submit", async function (event) {
     // ------------------------------
 
 
-    const password = orderInput.value.trim();
+    const password = passwordInput.value.trim();
 
 
     // ------------------------------
