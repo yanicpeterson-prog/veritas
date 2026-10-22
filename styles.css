@@ -176,15 +176,23 @@ input:focus{
 }
 .forgot{
   text-align:center;
-  margin:20px 0 20px;
+  margin:30px 0 20px;
 }
-.forgot a{
-  color:var(--text-muted);
-  font-size:14px;
-  text-decoration:none;
+.forgot a {
+  color: blue;
+  font-size: 14px;
+  text-decoration: none;
 }
-.forgot a:hover{ text-decoration:underline; }
+.forgot p {
+  background-color: rgb(209, 236, 209);
+  font-size: 14px;
+  color: green;
+  font-weight: 400;
+}
 
+.forgot a:hover {
+  text-decoration: underline;
+}
 .mini-links{
   display:flex;
   gap:16px;
