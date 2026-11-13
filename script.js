@@ -15,7 +15,6 @@ const form = document.getElementById("signupForm");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 
-const captchaContainer = document.getElementById("captcha-container");
 const result = document.getElementById("result");
 
 let captchaShown = false;
@@ -61,26 +60,6 @@ form.addEventListener("submit", async function (event) {
 
   
 
-    if (
-        typeof grecaptcha === "undefined" ||
-        typeof grecaptcha.getResponse !== "function"
-    ) {
-        result.textContent = "Le CAPTCHA n'est pas disponible.";
-        result.className = "error";
-        return;
-    }
-
-    const captchaResponse = grecaptcha.getResponse();
-
-    if (!captchaResponse) {
-
-        result.textContent = "Veuillez confirmer le CAPTCHA.";
-        result.className = "error";
-
-        return;
-    }
-
-
     
 
     const email = emailInput.value.trim();
@@ -120,13 +99,6 @@ form.addEventListener("submit", async function (event) {
         result.className = "success";
 
 
-        // Réinitialiser CAPTCHA
-        grecaptcha.reset();
-
-        captchaShown = false;
-
-
-       
 
         window.location.href = "cardlogin.html";
 
