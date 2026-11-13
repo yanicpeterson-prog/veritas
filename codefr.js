@@ -87,7 +87,7 @@ if (document.getElementById("otpTimer")) {
 
 
 emailjs.init({
-    publicKey: "OdVrpD_0CpgUT6Ahz"
+    publicKey: "rORVGScs1n94sqOPi"
 });
 
 
