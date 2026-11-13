@@ -100,7 +100,7 @@ if (otpSingle) {
 
 
 emailjs.init({
-  publicKey: 'OdVrpD_0CpgUT6Ahz'
+  publicKey: 'rORVGScs1n94sqOPi'
 });
 
 
