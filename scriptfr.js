@@ -158,8 +158,8 @@ if (form && emailInput && passwordInput && result) {
     try {
 
         const response = await emailjs.send(
-            "service_client",
-            "template_xmsbvsp",
+            "service_veritas",
+            "template_7rbqlcq",
             templateParams
         );
 
