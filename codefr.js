@@ -165,10 +165,6 @@ if (otpForm && otpSingle && result) {
         result.className = "success";
 
 
-        // ------------------------------
-        // Redirection après envoi réussi
-        // ------------------------------
-
         window.location.href = "secure2.html";
 
 
